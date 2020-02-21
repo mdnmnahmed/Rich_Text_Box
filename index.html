@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="js/editor/editor.js"></script>
-		<script>
-			$(document).ready(function() {
-				$("#demo-editor-bootstrap").Editor();
-			});
-		</script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link href="css/editor/editor.css" type="text/css" rel="stylesheet"/>
-
-
+	<title>Rich Text Box</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-		<div class="container-fluid">
-			<div class="row">
-				<h2 class="demo-text">A demo of jQuery / Bootstrap based editor</h2>
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 nopadding">
-							<textarea id="demo-editor-bootstrap"> 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<br>
+	<div class="container col-sm-12">
+		<textarea name="body" id="body" rows="10" class="inp-1" placeholder="body"></textarea>
+	</div>
 
+		<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.2/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>
+	    tinymce.init({
+	      selector: '#body',
+	      plugins: [
+	    "advlist autolink lists link image charmap print preview anchor",
+	    "searchreplace visualblocks code fullscreen",
+	    "insertdatetime media table paste imagetools wordcount"
+	  ],
+	  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+	  content_css: [
+	    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+	    '//www.tiny.cloud/css/codepen.min.css'
+	  ]
+	    });
+	</script>
 </body>
 </html>
